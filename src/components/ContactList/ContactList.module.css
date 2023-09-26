@@ -1,0 +1,27 @@
+.btnDelete {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  align-items: center;
+  margin-left: 10px;
+}
+.iconDelete {
+  stroke: black;
+}
+.iconDelete:hover,
+.iconDelete:focus {
+  stroke: red;
+}
+
+.box {
+  /* width: 300px; */
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nameItem {
+  margin-right: auto;
+}

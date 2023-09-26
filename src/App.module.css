@@ -1,0 +1,17 @@
+.form{
+    display: flex;
+}
+.box{
+    width: 300px;
+    margin: 30px auto;
+   border: 1px solid;
+   border-radius: 6px;
+   background-color: #fff;
+   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.title{
+    padding: 10px;
+}
+.inputFilter{
+    margin-left: 10px;
+}
