@@ -31,7 +31,6 @@ export class App extends Component {
       name: '',
       number: '',
     }));
-    console.log(name, number);
   };
 
   handleFilterChange = filter => {
@@ -50,8 +49,6 @@ export class App extends Component {
   };
 
   componentDidMount() {
-    console.log(`App componentDidMount`);
-
     const contacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contacts);
     if (parsedContacts) {
@@ -59,10 +56,7 @@ export class App extends Component {
     }
   }
   componentDidUpdate(prevProps, prevState) {
-    console.log(`App componentDidUpdate`);
     if (this.state.contacts !== prevState.contacts) {
-      console.log(`UPDATE contacts`);
-
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
