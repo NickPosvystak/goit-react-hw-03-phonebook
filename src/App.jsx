@@ -45,25 +45,18 @@ export class App extends Component {
   // Delete contact
   handleDeleteContact = contactId => {
     this.setState(prevState => ({
-      contacts: prevState.contacts.filter(contact => contact.id !== contactId)
-      // if(this.state.contacts.length === 0){
-
-      // }
+      contacts: prevState.contacts.filter(contact => contact.id !== contactId),
     }));
   };
 
   componentDidMount() {
     console.log(`App componentDidMount`);
 
-    const contacts = localStorage.getItem('contacts')
-    const parsedContacts = JSON.parse(contacts)
+    const contacts = localStorage.getItem('contacts');
+    const parsedContacts = JSON.parse(contacts);
     if (parsedContacts) {
-        this.setState({contacts: parsedContacts});
+      this.setState({ contacts: parsedContacts });
     }
-
-
-  
-
   }
   componentDidUpdate(prevProps, prevState) {
     console.log(`App componentDidUpdate`);
@@ -85,10 +78,14 @@ export class App extends Component {
         <ContactForm onAddContact={this.handleAddContact} />
         <h2 className={css.title}>Contacts</h2>
         <Filter filter={filter} onFilterChange={this.handleFilterChange} />
-        {contacts.length > 0 ? <ContactList
-          contacts={filteredContacts}
-          onDeleteContact={this.handleDeleteContact}
-        /> : <p className={ css.messageTitle}>You have any saved contacts</p>}
+        {contacts.length > 0 ? (
+          <ContactList
+            contacts={filteredContacts}
+            onDeleteContact={this.handleDeleteContact}
+          />
+        ) : (
+          <p className={css.messageTitle}>You have any saved contacts</p>
+        )}
       </div>
     );
   }
