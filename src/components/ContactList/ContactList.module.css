@@ -1,8 +1,7 @@
 .btnDelete {
   border: none;
-  background-color: #fff;
+  background-color: transparent;
   cursor: pointer;
-  align-items: center;
   margin-left: 10px;
 }
 .iconDelete {
@@ -65,86 +64,6 @@
   opacity: 0.6;
 }
 
-/* ul:not(ul ul) > li.big {
-  background-color: lightgreen;
-  padding: 1.6rem 2rem;
-  padding-bottom: 3rem;
-} */
-	
-/* ul:not(ul ul) {
-  padding: 2rem;
-  padding-bottom: 4rem;
-  display: grid;
-  grid-template-columns: max-content;
-  z-index: 1;
-  position: relative;
-  perspective: 50vw;
-  transform-style: preserve-3d;
-} */
-/* 
-ul:not(ul ul) .done {
-  text-decoration: line-through;
-} */
-
-/* ul:not(ul ul) > li {
-  --levitate: 0;
-  padding: 1.2rem 2rem;
-  background-color: pink;
-  position: relative;
-  transform-style: preserve-3d;
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.3s;
-} */
-
-/* ul:not(ul ul) > li::after {
-  content: '';
-  pointer-events: none;
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: 1;
-  mix-blend-mode: overlay;
-  background-image: linear-gradient(to left, #ffe4b2, #c8b188);
-} */
-
-/* ul:not(ul ul) > li:hover {
-  --levitate: 1;
-} */
-
-/* ul:not(ul ul) > li:hover::before {
-  transform: translate3d(6rem, 1rem, -1px) scale(calc(1 - var(--levitate) * 0.1)) rotate(1.5deg);
-  filter: blur(8px);
-} */
-
-/* ul:not(ul ul) > li:hover::after {
-  opacity: 0.6;
-} */
-
-/* ul:not(ul ul) > li.big {
-  background-color: lightgreen;
-  padding: 1.6rem 2rem;
-  padding-bottom: 3rem;
-} */
-
-/* ul:not(ul ul) > li ul {
-  margin-top: 0.5em;
-  margin-left: 1em;
-  font-size: 0.8em;
-} */
-/* 
-ul:not(ul ul) > li ul li {
-  z-index: 1;
-} */
-
-/* ul:not(ul ul) > li ul li:first-letter {
-  font-size: 1.4em;
-} */
 
 ul:not(ul ul) > li:not(:first-of-type) {
   margin-top: 1rem;

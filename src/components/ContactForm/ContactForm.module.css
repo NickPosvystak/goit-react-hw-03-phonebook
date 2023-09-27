@@ -7,12 +7,16 @@
   margin: 10px auto;
   padding: 10px;
 }
+.input{
+  font-family: 'Norican', cursive;
+}
 
 .btnAdd {
   width: 90px;
+  font-family: 'Norican', cursive;
   margin: 0 auto;
   appearance: none;
-  background-color: transparent;
+  background-color: #fff;
   border: 1px solid #1a1a1a;
   border-radius: 5px;
   box-sizing: border-box;

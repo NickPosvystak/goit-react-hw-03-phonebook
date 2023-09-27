@@ -20,6 +20,7 @@
   color: saddlebrown;
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 4rem;
 }
@@ -37,7 +38,9 @@
   margin-left: 10px;
 }
 .messageTitle {
-  text-align: center;
-  font-size: 12px;
   padding: 10px;
+  font-family: 'Norican', cursive;
+  color: saddlebrown;
+  text-align: center;
+  font-size: 10px;
 }
