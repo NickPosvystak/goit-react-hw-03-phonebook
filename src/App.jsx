@@ -85,10 +85,10 @@ export class App extends Component {
         <ContactForm onAddContact={this.handleAddContact} />
         <h2 className={css.title}>Contacts</h2>
         <Filter filter={filter} onFilterChange={this.handleFilterChange} />
-        <ContactList
+        {contacts.length > 0 ? <ContactList
           contacts={filteredContacts}
           onDeleteContact={this.handleDeleteContact}
-        />
+        /> : <p className={ css.messageTitle}>You have any saved contacts</p>}
       </div>
     );
   }
