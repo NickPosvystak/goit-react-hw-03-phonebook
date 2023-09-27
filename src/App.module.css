@@ -1,21 +1,43 @@
-.form{
-    display: flex;
+.form {
+  display: flex;
 }
-.box{
-    width: 300px;
-    margin: 30px auto;
-   border: 1px solid;
-   border-radius: 6px;
-   background-color: #fff;
-   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+.box {
+  width: 300px;
+  margin: 30px auto;
+  border: 1px solid;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  background-image: url(./assets/image/photo12.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.title{
-    padding: 10px;
+.title {
+  padding: 10px;
+  margin-top: 2rem;
+  font-family: 'Norican', cursive;
+  color: saddlebrown;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 4rem;
 }
-.inputFilter{
-    margin-left: 10px;
+.title:before,
+.title:after {
+  content: '';
+  display: block;
+  width: 5rem;
+  height: 2px;
+  background-color: currentColor;
+  margin: 0 1rem;
 }
-.messageTitle{
-text-align: center;
-font-size: 12px;
-padding: 10px;}
+
+.inputFilter {
+  margin-left: 10px;
+}
+.messageTitle {
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+}

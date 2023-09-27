@@ -13,7 +13,7 @@
   stroke: red;
 }
 
-.box {
+.boxList {
   /* width: 300px; */
   margin: 10px auto;
   padding: 10px;
@@ -24,4 +24,157 @@
 
 .nameItem {
   margin-right: auto;
+}
+.itemList {
+  --levitate: 0;
+  padding: 1.2rem 2rem;
+  background-color: pink;
+  position: relative;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s;
+}
+.itemList::after {
+  content: '';
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  mix-blend-mode: overlay;
+  background-image: linear-gradient(to left, #ffe4b2, #c8b188);
+}
+
+.itemList:hover {
+  --levitate: 1;
+   background-color: pink;
+}
+.itemList::before {
+  transform: translate3d(6rem, 1rem, -1px)
+    scale(calc(1 - var(--levitate) * 0.1)) rotate(1.5deg);
+  filter: blur(8px);
+}
+
+.itemList::after {
+  opacity: 0.6;
+}
+
+/* ul:not(ul ul) > li.big {
+  background-color: lightgreen;
+  padding: 1.6rem 2rem;
+  padding-bottom: 3rem;
+} */
+	
+/* ul:not(ul ul) {
+  padding: 2rem;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: max-content;
+  z-index: 1;
+  position: relative;
+  perspective: 50vw;
+  transform-style: preserve-3d;
+} */
+/* 
+ul:not(ul ul) .done {
+  text-decoration: line-through;
+} */
+
+/* ul:not(ul ul) > li {
+  --levitate: 0;
+  padding: 1.2rem 2rem;
+  background-color: pink;
+  position: relative;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s;
+} */
+
+/* ul:not(ul ul) > li::after {
+  content: '';
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  mix-blend-mode: overlay;
+  background-image: linear-gradient(to left, #ffe4b2, #c8b188);
+} */
+
+/* ul:not(ul ul) > li:hover {
+  --levitate: 1;
+} */
+
+/* ul:not(ul ul) > li:hover::before {
+  transform: translate3d(6rem, 1rem, -1px) scale(calc(1 - var(--levitate) * 0.1)) rotate(1.5deg);
+  filter: blur(8px);
+} */
+
+/* ul:not(ul ul) > li:hover::after {
+  opacity: 0.6;
+} */
+
+/* ul:not(ul ul) > li.big {
+  background-color: lightgreen;
+  padding: 1.6rem 2rem;
+  padding-bottom: 3rem;
+} */
+
+/* ul:not(ul ul) > li ul {
+  margin-top: 0.5em;
+  margin-left: 1em;
+  font-size: 0.8em;
+} */
+/* 
+ul:not(ul ul) > li ul li {
+  z-index: 1;
+} */
+
+/* ul:not(ul ul) > li ul li:first-letter {
+  font-size: 1.4em;
+} */
+
+ul:not(ul ul) > li:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+ul:not(ul ul) > li:nth-child(3n) {
+  transform: translate3d(-5px, calc(var(--levitate) * -5px), calc(var(--levitate) * 3rem)) rotate(-0.6deg) rotateX(calc(var(--levitate) * 6deg)) rotateY(calc(var(--levitate) * -3deg));
+}
+
+ul:not(ul ul) > li:nth-child(3n-1) {
+  transform: translate3d(7px, calc(var(--levitate) * -5px), calc(var(--levitate) * 3rem)) rotate(-0.5deg) rotateX(calc(var(--levitate) * 6deg)) rotateY(calc(var(--levitate) * -3deg));
+}
+
+ul:not(ul ul) > li:nth-child(3n-2) {
+  transform: translate3d(0px, calc(var(--levitate) * -5px), calc(var(--levitate) * 3rem)) rotate(0.5deg) rotateX(calc(var(--levitate) * 6deg)) rotateY(calc(var(--levitate) * -3deg));
+}
+
+ul:not(ul ul) > li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.3s;
+  height: calc(100% - 2px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  transform-origin: bottom left;
+  transform: translate3d(8px, 2px, -1px) rotate(1deg);
+  filter: blur(2px);
 }

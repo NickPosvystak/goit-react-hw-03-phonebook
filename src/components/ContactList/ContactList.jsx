@@ -3,7 +3,7 @@ import css from './ContactList.module.css';
 
 const ContactList = ({ contacts, onDeleteContact }) => {
   return (
-    <ul className={css.box}>
+    <ul className={css.boxList}>
       {contacts.map(contact => {
         return (
           <li key={contact.id} className={css.itemList}>

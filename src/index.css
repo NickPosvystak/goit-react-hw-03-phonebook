@@ -1,16 +1,32 @@
 @import-normalize; /* bring in normalize.css styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Norican&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+html {
+	font-size: 62.5%;
+
+	@media only screen and (max-width: 624px) {
+		font-size: 50%;
+	}}
 body {
   margin: 0;
-   background-image: url(./assets/image/pexels.jpg);
-   background-repeat: no-repeat;
-   background-position: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  	font-size: 1.6rem;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.3)), url(https://assets.codepen.io/2509128/paper.jpeg);
+	}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -25,6 +41,16 @@ h5,
 h6,
 p {
   margin: 0;
+}
+ul:not(ul ul) {
+	padding: 2rem;
+	padding-bottom: 4rem;
+	display: grid;
+	grid-template-columns: max-content;
+	z-index: 1;
+	position: relative;
+	perspective: 50vw;
+	transform-style: preserve-3d;
 }
 
 ul {
